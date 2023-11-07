@@ -1,0 +1,7 @@
+sh_binary(
+    name = "hello_world",
+    srcs = ["hello.sh"],
+    deps = ["@bazel_tools//tools/bash/runfiles"],
+    args = ["$(rlocationpath hello.txt)"],
+    data = ["hello.txt"]
+)
